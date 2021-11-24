@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Welcome from './components/Welcome';
+import BlogPage from './components/BlogPage';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Welcome />
+    <BlogPage />
   </React.StrictMode>,
   document.getElementById('root')
 );
