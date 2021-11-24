@@ -4,7 +4,7 @@ import "./styles.css";
 
 function Welcome() {
     return (
-        <div>
+        <div class="welcome-container">
         <h1>Welcome to DevWoBlog</h1>
         <p>Latest Articles</p>
         </div>
