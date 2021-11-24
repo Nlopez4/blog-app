@@ -29,7 +29,6 @@ function CreatePost() {
                 <input
                     type="title"
                     name="title"
-                    placeholder="Title"
                     onChange={handleTitleChange}
                     value={title}
                 />
