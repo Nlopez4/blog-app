@@ -11,12 +11,6 @@ function BlogPage() {
             <div>
             <CardPost />
             </div>
-            <div>
-                <h2>Create a Post</h2>
-            </div>
-            <div>
-            <CreatePost />
-            </div>
         </div>
 
     )

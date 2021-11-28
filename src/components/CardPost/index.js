@@ -1,20 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./styles.css";
+import CreatePost from "../../components/CreatePost";
 
-const card = {
-    title: 'How to start a React App',
-    by: 'Natalie Lopez',
-    body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia',
-};
+const CardPost = () => {
+    const [title, setTitle] = useState('')
+    const [by, setBy] = useState('')
+    const [body, setBody] = useState('')
 
-function CardPost(props) {
+    const saveTitleTostate = event => {
+        setTitle(event.target.value);
+    };
+
+    const saveByTostate = event => {
+        setBy(event.target.value);
+    };
+
+    const saveBodyTostate = event => {
+        setBody(event.target.value);
+    };
+
     return (
-        <div>
-            <p>Title: {card.title}</p>
-            <p>By: {card.by}</p>
-            <p>Description: {card.body}</p>
-        </div>
+        <CreatePost
+        saveTitleTostate = { saveTitleTostate }
+        saveByTostate = { saveByTostate }
+        saveBodyTostate = { saveBodyTostate }
+        />
     )
+   
 }
+
+
 
 export default CardPost;

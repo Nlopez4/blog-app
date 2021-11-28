@@ -1,62 +1,37 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./styles.css";
 
-function CreatePost() {
-    const [title, setTitle] = useState('')
-    const [by, setBy] = useState('')
-    const [body, setBody] = useState('')
-    
-    const handleTitleChange = event => {
-        setTitle(event.target.value)
-    };
-
-    const handleByChange = event => {
-        setBy(event.target.value)
-    };
-
-    const handleBodyChange = event => {
-        setBody(event.target.value)
-    };
-
-    const handleSubmit = event => {
-        event.preventDefault();
-    };
-
+function CreatePost(props) {
     return (
-        <form onSubmit={handleSubmit}>
-            <div>
-                <label>Title </label>
-                <input
-                    type="title"
-                    name="title"
-                    onChange={handleTitleChange}
-                    value={title}
-                />
-            </div>
-            <div>
-            <label>By </label>
-                <input
-                    type="by"
-                    name="by"
-                    onChange={handleByChange}
-                    value={by}
-                />
-            </div>
-            <div>
-            <label>Description</label>
-                <textarea
-                    type="body"
-                    name="body"
-                    placeholder="This post is about..."
-                    onChange={handleBodyChange}
-                    value={body}
-                />
-            </div>
-            <button type="submit">
-                Submit
-            </button>
-        </form>
+    <form>
+      <h1>Create New Post</h1>
+      <input type ="text" 
+      onChange={props.saveTitleTostate}
+      placeholder="title" 
+      size="39" 
+      required
+      ></input>
+      <br />
+      <br />
+      <input type ="text" 
+      onChange={props.saveByTostate}
+      placeholder="by" 
+      size="39" 
+      required
+      ></input>
+      <br />
+      <br />
+      <textarea 
+      placeholder="contents" 
+      onChange={props.saveBodyTostate}
+      rows="8" cols="41"
+      required
+      ></textarea>
+      <br />
+      <br />
+      <button>Save Post</button>
+    </form>
     )
-}
 
+}
 export default CreatePost;
